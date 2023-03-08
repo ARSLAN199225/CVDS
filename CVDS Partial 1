@@ -1,0 +1,37 @@
+package EDU.ECİ.CVDS.FizzBuzz;
+
+public class FizzBuzz {
+    public final static String fizz = "Fizz";
+    public final static String buzz = "Buzz";
+
+    public static String fizzBuzz(int number) {
+        // Meets possibility of fizz and buzz
+        String str_number = Integer.toString(number);
+
+        if (str_number.contains("3") && str_number.contains("5")) {
+            return fizz + buzz;
+        } else if (number % 3 == 0 && number % 5 == 0) {
+            return fizz + buzz;
+        }
+
+        // If the number is directly a multiple of 3 or 5
+
+        if (number % 3 == 0) {
+            return fizz;
+        } else if (number % 5 == 0) {
+            return buzz;
+        }
+
+        // If the number contains 3 or 5
+
+        if (str_number.contains("3")) {
+            return fizz;
+        } else if (str_number.contains("5")) {
+            return buzz;
+        }
+
+        // It is not a multiple of 3 or 5
+
+        return str_number;
+    }
+}
